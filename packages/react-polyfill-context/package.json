@@ -1,0 +1,40 @@
+{
+  "name": "react-polyfill-context",
+  "version": "0.1.0",
+  "description": "React createContext polyfill",
+  "keywords": [
+    "React",
+    "createContext",
+    "polyfill"
+  ],
+  "author": "huya.nzb <huya.nzb@taobao.com>",
+  "homepage": "https://github.com/kingback/react-polyfills",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingback/react-polyfills.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "babel src --out-dir lib"
+  },
+  "bugs": {
+    "url": "https://github.com/kingback/react-polyfills/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^0.14.9",
+    "react-dom": "^0.14.9"
+  }
+}
