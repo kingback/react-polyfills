@@ -1,6 +1,6 @@
 {
   "name": "react-polyfill-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hooks polyfill",
   "keywords": [
     "React",
@@ -29,7 +29,7 @@
     "url": "https://github.com/kingback/react-polyfills/issues"
   },
   "dependencies": {
-    "react-polyfill-ref": "^1.0.0"
+    "react-polyfill-ref": "^1.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
