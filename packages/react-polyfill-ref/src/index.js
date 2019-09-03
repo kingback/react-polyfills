@@ -7,7 +7,7 @@ export function useFallbackRef() {
 
 export function getRef(component) {
   return ( // > 16.x
-    component._reactInternalInstance &&
+    component._reactInternalFiber &&
     component._reactInternalFiber.ref
   ) || ( // < 16.x
     component._reactInternalInstance &&
