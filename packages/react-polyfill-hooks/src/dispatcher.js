@@ -1,4 +1,4 @@
-import { rAF, isString, isFunction, isDepsChanged, objectIs } from './utils';
+import { rAF, isFunction, isDepsChanged, objectIs } from './utils';
 import { MEMO, EFFECT, LAYOUT_EFFECT } from './types';
 import { createRef } from 'react-polyfill-ref';
 
@@ -63,7 +63,7 @@ export default class Dispatcher {
         state: isFunction(init) ? init(initState) : initState, // modify initial state
         dispatch: (action) => { // never update
           const { value, setter } = state[index];
-          const newState = reducer(value.state, isString(action) ? { type: action } : action);
+          const newState = reducer(value.state, action);
           !objectIs(value.state, newState) && setter({ ...value, state: newState });
         }
       };
@@ -104,7 +104,13 @@ export default class Dispatcher {
   }
 
   useImperativeHandle(ref, createHandle, deps) {
-    return this.useMemo(() => (ref(createHandle())), deps);
+    return this.useMemo(() => {
+      if (isFunction(ref)) {
+        ref(createHandle());
+      } else if (ref) {
+        ref.current = createHandle();
+      } 
+    }, deps);
   }
 
   useContext(context) {
@@ -115,7 +121,7 @@ export default class Dispatcher {
     const effects = this.state.filter(state => (
       state &&
       state.value &&
-      state.value.run &&
+      (unmount || state.value.run) &&
       state.value.callback &&
       state.value.type === type
     ));
@@ -123,7 +129,7 @@ export default class Dispatcher {
     // unmount
     effects.forEach((effect) => {
       (unmount || effect.value.run) &&
-      effect.unmount && effect.unmount();
+      effect.value.unmount && effect.value.unmount();
     });
 
     // mount || update

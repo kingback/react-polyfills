@@ -1,8 +1,12 @@
 import Dispatcher from './dispatcher';
 import React, { Component } from 'react';
-import { createForwardRef } from 'react-polyfill-ref';
+import { useFallbackRef, createForwardRef } from 'react-polyfill-ref';
 
 /* eslint-disable max-len, prefer-spread */
+
+// >= 16.3 && <= 16.8
+// has createRef/forwardRef but do not support hooks
+!React.useState && useFallbackRef();
 
 function useHook(hook) {
   return React[hook] ? React[hook] : (...args) => {
@@ -25,6 +29,7 @@ export const useRef = useHook('useRef');
 export const useImperativeHandle = useHook('useImperativeHandle');
 
 function createWithHooksComponent(render) {
+  let Forwarded = null;
   return class WithHooksComponent extends Component {
     static __with_hooks__ = true;
 
@@ -47,11 +52,12 @@ function createWithHooksComponent(render) {
     }
 
     render() {
+      let view = null;
       Dispatcher.previous = Dispatcher.current;
       Dispatcher.current = this.dispatcher;
       Dispatcher.current.reset();
       const needForwardRef = this.constructor.__need_forward_ref__;
-      const view = render(this.props, needForwardRef && createForwardRef(this));
+      view = render(this.props, needForwardRef && createForwardRef(this));
       Dispatcher.current.reset();
       Dispatcher.current = Dispatcher.previous;
       return view;
