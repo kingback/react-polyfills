@@ -1,14 +1,26 @@
 import React from 'react';
-import { forwardRef } from 'react-polyfill-ref';
-import { createContext } from 'react-polyfill-context';
-import { withHooks, useState, useContext, useEffect, useLayoutEffect, useReducer, useCallback, useImperativeHandle, useRef } from 'react-polyfill-hooks';
+import {
+  createRef,
+  forwardRef,
+  createContext,
+  withHooks,
+  useState,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useReducer,
+  useCallback,
+  useImperativeHandle,
+  useRef
+} from 'react-polyfill-all';
 
 const Context = createContext(0);
 const Forward = forwardRef((props, ref) => <div ref={ref}>Forward: {props.text}</div>);
 
 const Child = forwardRef(withHooks(({ onAdd, onMinus }, ref) => {
-  const inputRef = useRef();
+  const inputRef = useRef(createRef());
   const value = useContext(Context);
+  const [state] = useState(0);
 
   useImperativeHandle(ref, () => ({
     focus() {
@@ -24,6 +36,7 @@ const Child = forwardRef(withHooks(({ onAdd, onMinus }, ref) => {
   }, [value <= 5]);
 
   useEffect(() => {
+    console.log(state);
     console.log('child effect');
     return () => {
       console.log('child unmount');

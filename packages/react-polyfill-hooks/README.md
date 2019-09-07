@@ -11,7 +11,14 @@
 Just use `withHooks` to wrap your component, everything is just like the new React.
 
 ```jsx
-import { withHooks, useState, useEffect, useReducer, useCallback } from 'react-polyfill-hooks';
+import {
+  withHooks,
+  useState,
+  useEffect,
+  useReducer,
+  useCallback,
+  useRef
+} from 'react-polyfill-hooks';
 
 const App = withHooks((props) => {
   const [count, setCount] = useState(props.count || 0);

@@ -29,7 +29,6 @@ export const useRef = useHook('useRef');
 export const useImperativeHandle = useHook('useImperativeHandle');
 
 function createWithHooksComponent(render) {
-  let Forwarded = null;
   return class WithHooksComponent extends Component {
     static __with_hooks__ = true;
 
