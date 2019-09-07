@@ -4,7 +4,7 @@
 
 ## Support
 
-`>= React@0.14.9`
+`>= react@0.14.9`
 
 ## Usage
 

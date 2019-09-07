@@ -1,16 +1,18 @@
 {
-  "name": "react-polyfill-hooks",
+  "name": "universal-polyfill-context",
   "version": "1.0.3",
-  "description": "React hooks polyfill",
+  "description": "Universal polyfill context",
   "keywords": [
-    "React",
-    "hooks",
-    "polyfill"
+    "Universal",
+    "Polyfill",
+    "Context",
+    "Rax",
+    "React"
   ],
   "author": "huya.nzb <huya.nzb@taobao.com>",
   "homepage": "https://github.com/kingback/react-polyfills",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "lib/index",
   "directories": {
     "lib": "lib"
   },
@@ -29,17 +31,13 @@
     "url": "https://github.com/kingback/react-polyfills/issues"
   },
   "dependencies": {
-    "universal-polyfill-engine": "^1.0.0",
-    "universal-polyfill-hooks": "^1.0.0"
+    "universal-polyfill-engine": "^1.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "react": "^0.14.9",
-    "react-dom": "^0.14.9"
+    "@babel/preset-react": "^7.0.0"
   }
 }

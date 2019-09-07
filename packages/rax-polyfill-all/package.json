@@ -1,9 +1,11 @@
 {
-  "name": "react-polyfill-hooks",
+  "name": "rax-polyfill-all",
   "version": "1.0.3",
-  "description": "React hooks polyfill",
+  "description": "Rax all polyfills",
   "keywords": [
-    "React",
+    "Rax",
+    "ref",
+    "context",
     "hooks",
     "polyfill"
   ],
@@ -29,8 +31,9 @@
     "url": "https://github.com/kingback/react-polyfills/issues"
   },
   "dependencies": {
-    "universal-polyfill-engine": "^1.0.0",
-    "universal-polyfill-hooks": "^1.0.0"
+    "rax-polyfill-context": "^1.0.0",
+    "rax-polyfill-hooks": "^1.0.3",
+    "rax-polyfill-ref": "^1.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -39,7 +42,6 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
-    "react": "^0.14.9",
-    "react-dom": "^0.14.9"
+    "rax": "^0.6.5"
   }
 }

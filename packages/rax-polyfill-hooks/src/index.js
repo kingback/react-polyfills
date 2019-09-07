@@ -1,4 +1,4 @@
-import React from 'react';
+import Rax from 'rax';
 import Engine from 'universal-polyfill-engine';
 import {
   withHooks,
@@ -13,7 +13,7 @@ import {
   useImperativeHandle
 } from 'universal-polyfill-hooks';
 
-Engine.set(React);
+Engine.set(Rax);
 
 export {
   withHooks,

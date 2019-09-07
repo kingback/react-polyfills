@@ -1,17 +1,16 @@
-# `react-polyfill-context`
+# `rax-polyfill-context`
 
-> Polyfill for React new context api
+> Polyfill for Rax new context api
 
 ## Support
 
-`>= react@0.14.9`
+`>= rax@0.6.5`
 
 ## Usage
 
 ```jsx
-import React from 'react';
-import { render } from 'react-dom';
-import { createContext } from 'react-polyfill-context';
+import { render } from 'rax';
+import { createContext } from 'rax-polyfill-context';
 const Context = createContext();
 
 function App() {
@@ -35,5 +34,5 @@ For more usage, see <https://reactjs.org/docs/context.html#reactcreatecontext>
 
 ## Others
 
-You can use it with [react-polyfill-ref](https://www.npmjs.com/package/react-polyfill-ref) and [react-polyfill-hooks](https://www.npmjs.com/package/react-polyfill-hooks)
+You can use it with [rax-polyfill-ref](https://www.npmjs.com/package/rax-polyfill-ref) and [rax-polyfill-hooks](https://www.npmjs.com/package/rax-polyfill-hooks)
 

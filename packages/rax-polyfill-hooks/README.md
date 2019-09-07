@@ -1,14 +1,14 @@
-# `react-polyfill-hooks`
+# `rax-polyfill-hooks`
 
-> Polyfill for React new hooks api
+> Polyfill for Rax new hooks api
 
 ## Support
 
-`>= react@0.14.9`
+`>= rax@0.6.5`
 
 ## Usage
 
-Just use `withHooks` to wrap your component, everything is just like the new React.
+Just use `withHooks` to wrap your component, everything is just like the new Rax.
 
 ```jsx
 import {
@@ -18,7 +18,7 @@ import {
   useReducer,
   useCallback,
   useRef
-} from 'react-polyfill-hooks';
+} from 'rax-polyfill-hooks';
 
 const App = withHooks((props) => {
   const [count, setCount] = useState(props.count || 0);
@@ -85,5 +85,5 @@ For more usage, see <https://reactjs.org/docs/hooks-reference.html>
 
 ## Others
 
-You can use it with [react-polyfill-ref](https://www.npmjs.com/package/react-polyfill-ref) and [react-polyfill-context](https://www.npmjs.com/package/react-polyfill-context)
+You can use it with [rax-polyfill-ref](https://www.npmjs.com/package/rax-polyfill-ref) and [rax-polyfill-context](https://www.npmjs.com/package/rax-polyfill-context)
 

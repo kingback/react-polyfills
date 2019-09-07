@@ -1,10 +1,11 @@
 {
-  "name": "react-polyfill-hooks",
-  "version": "1.0.3",
-  "description": "React hooks polyfill",
+  "name": "rax-polyfill-ref",
+  "version": "1.0.2",
+  "description": "Rax createRef forwardRef polyfill",
   "keywords": [
-    "React",
-    "hooks",
+    "Rax",
+    "createRef",
+    "forwardRef",
     "polyfill"
   ],
   "author": "huya.nzb <huya.nzb@taobao.com>",
@@ -30,7 +31,7 @@
   },
   "dependencies": {
     "universal-polyfill-engine": "^1.0.0",
-    "universal-polyfill-hooks": "^1.0.0"
+    "universal-polyfill-ref": "^1.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -38,8 +39,6 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "react": "^0.14.9",
-    "react-dom": "^0.14.9"
+    "rax": "^0.6.5"
   }
 }

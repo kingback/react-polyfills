@@ -1,7 +1,7 @@
-import React from 'react';
+import Rax from 'rax';
 import Engine from 'universal-polyfill-engine';
 import { createContext } from 'universal-polyfill-context';
 
-Engine.set(React);
+Engine.set(Rax);
 
 export { createContext };

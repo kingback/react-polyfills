@@ -1,6 +1,6 @@
 import { rAF, isFunction, isDepsChanged, objectIs } from './utils';
 import { MEMO, EFFECT, LAYOUT_EFFECT } from './types';
-import { createRef } from 'react-polyfill-ref';
+import { createRef } from 'universal-polyfill-ref';
 
 /* eslint-disable no-plusplus, no-param-reassign */
 

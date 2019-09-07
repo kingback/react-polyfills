@@ -1,15 +1,15 @@
-# `react-polyfill-ref`
+# `rax-polyfill-ref`
 
-> Polyfill for React new ref api
+> Polyfill for Rax new ref api
 
 ## Support
 
-`>= react@0.14.9`
+`>= rax@0.6.5`
 
 ## Usage
 
 ```jsx
-import { createRef, forwardRef } from 'react-polyfill-ref';
+import { createRef, forwardRef } from 'rax-polyfill-ref';
 const ref = createRef();
 
 function App() {
@@ -43,5 +43,5 @@ For more usage, see <https://reactjs.org/docs/refs-and-the-dom.html#creating-ref
 
 ## Others
 
-You can use it with [react-polyfill-context](https://www.npmjs.com/package/react-polyfill-context) and [react-polyfill-hooks](https://www.npmjs.com/package/react-polyfill-hooks)
+You can use it with [rax-polyfill-context](https://www.npmjs.com/package/rax-polyfill-context) and [rax-polyfill-hooks](https://www.npmjs.com/package/rax-polyfill-hooks)
 
