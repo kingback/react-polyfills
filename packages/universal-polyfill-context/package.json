@@ -1,6 +1,6 @@
 {
   "name": "universal-polyfill-context",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Universal polyfill context",
   "keywords": [
     "Universal",
@@ -31,7 +31,7 @@
     "url": "https://github.com/kingback/react-polyfills/issues"
   },
   "dependencies": {
-    "universal-polyfill-engine": "^1.0.0"
+    "universal-polyfill-engine": "^1.0.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
