@@ -11,7 +11,7 @@ import { createRef, forwardRef } from 'universal-polyfill-ref';
 import React from 'react';
 Engine.set(React);
 
-import Rax from 'rax';
+import * as Rax from 'rax';
 Engine.set(Rax);
 ```
 

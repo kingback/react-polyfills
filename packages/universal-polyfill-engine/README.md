@@ -10,6 +10,6 @@ import Engine from 'universal-polyfill-engine';
 import React from 'react';
 Engine.set(React);
 
-import Rax from 'rax';
+import * as Rax from 'rax';
 Engine.set(Rax);
 ```

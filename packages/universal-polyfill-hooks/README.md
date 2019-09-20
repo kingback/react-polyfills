@@ -11,7 +11,7 @@ import { useState, useEffect } from 'universal-polyfill-hooks';
 import React from 'react';
 Engine.set(React);
 
-import Rax from 'rax';
+import * as Rax from 'rax';
 Engine.set(Rax);
 ```
 
