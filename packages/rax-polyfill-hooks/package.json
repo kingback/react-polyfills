@@ -1,6 +1,6 @@
 {
   "name": "rax-polyfill-hooks",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Rax hooks polyfill",
   "keywords": [
     "Rax",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "universal-polyfill-engine": "^1.0.4",
-    "universal-polyfill-hooks": "^1.0.4"
+    "universal-polyfill-hooks": "^1.0.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

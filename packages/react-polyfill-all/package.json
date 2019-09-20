@@ -1,6 +1,6 @@
 {
   "name": "react-polyfill-all",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "React all polyfills",
   "keywords": [
     "React",
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "react-polyfill-context": "^1.0.4",
-    "react-polyfill-hooks": "^1.0.4",
+    "react-polyfill-hooks": "^1.0.6",
     "react-polyfill-ref": "^1.0.4"
   },
   "devDependencies": {
