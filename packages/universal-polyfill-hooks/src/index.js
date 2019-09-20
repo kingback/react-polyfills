@@ -1,17 +1,24 @@
 import Engine from 'universal-polyfill-engine';
 import Dispatcher from './dispatcher';
 import { useFallbackRef, createForwardRef } from 'universal-polyfill-ref';
+const hooks = {};
 
 /* eslint-disable max-len, prefer-spread */
 
 function useHook(hook) {
-  return Engine.get()[hook] ? Engine.get()[hook] : (...args) => {
-    if (Dispatcher.current) {
-      return Dispatcher.current[hook].apply(Dispatcher.current, args);
-    } else {
-      throw new Error(`You can not use "${hook}" outside of the function.`);
+  // lazy initial
+  return function(...oArgs) {
+    if (!hooks[hook]) {
+      hooks[hook] = Engine.get()[hook] ? Engine.get()[hook] : (...args) => {
+        if (Dispatcher.current) {
+          return Dispatcher.current[hook].apply(Dispatcher.current, args);
+        } else {
+          throw new Error(`You can not use "${hook}" outside of the function.`);
+        }
+      };
     }
-  };
+    return hooks[hook](...oArgs);
+  }
 }
 
 export const useState = useHook('useState');
