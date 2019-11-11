@@ -1,5 +1,10 @@
 import Engine from 'universal-polyfill-engine';
 const PropTypes = { any: () => {} };
+let supportNewContext = true;
+
+export function useFallbackContext() {
+  supportNewContext = false;
+}
 
 function createContextProvider(Context) {
   return class ContextProvider extends Engine.get().Component {
@@ -44,7 +49,7 @@ function createContextConsumer(defaultValue, Context) {
 // TODO
 // contextType
 export function createContext(defaultValue) {
-  if (Engine.get().createContext) return Engine.get().createContext(defaultValue);
+  if (Engine.get().createContext && supportNewContext) return Engine.get().createContext(defaultValue);
   const Context = { _currentValue: defaultValue }; // for useContext
   Context.Provider = createContextProvider(Context);
   Context.Consumer = createContextConsumer(defaultValue, Context);
