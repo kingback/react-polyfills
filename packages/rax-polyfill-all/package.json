@@ -1,6 +1,6 @@
 {
   "name": "rax-polyfill-all",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Rax all polyfills",
   "keywords": [
     "Rax",
@@ -31,9 +31,9 @@
     "url": "https://github.com/kingback/react-polyfills/issues"
   },
   "dependencies": {
-    "rax-polyfill-context": "^1.0.8",
-    "rax-polyfill-hooks": "^1.0.7",
-    "rax-polyfill-ref": "^1.0.7"
+    "rax-polyfill-context": "^1.0.9",
+    "rax-polyfill-hooks": "^1.0.9",
+    "rax-polyfill-ref": "^1.0.9"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

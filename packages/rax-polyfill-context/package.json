@@ -1,6 +1,6 @@
 {
   "name": "rax-polyfill-context",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Rax createContext polyfill",
   "keywords": [
     "Rax",
@@ -29,8 +29,8 @@
     "url": "https://github.com/kingback/react-polyfills/issues"
   },
   "dependencies": {
-    "universal-polyfill-context": "^1.0.8",
-    "universal-polyfill-engine": "^1.0.4"
+    "universal-polyfill-context": "^1.0.9",
+    "universal-polyfill-engine": "^1.0.9"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

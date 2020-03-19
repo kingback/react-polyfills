@@ -1,6 +1,6 @@
 {
   "name": "rax-polyfill-ref",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Rax createRef forwardRef polyfill",
   "keywords": [
     "Rax",
@@ -30,8 +30,8 @@
     "url": "https://github.com/kingback/react-polyfills/issues"
   },
   "dependencies": {
-    "universal-polyfill-engine": "^1.0.4",
-    "universal-polyfill-ref": "^1.0.4"
+    "universal-polyfill-engine": "^1.0.9",
+    "universal-polyfill-ref": "^1.0.9"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
