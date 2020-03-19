@@ -10,7 +10,8 @@ import {
   useLayoutEffect,
   useMemo,
   useCallback,
-  useImperativeHandle
+  useImperativeHandle,
+  useDebugValue
 } from 'universal-polyfill-hooks';
 
 Engine.set(Rax);
@@ -25,5 +26,6 @@ export {
   useLayoutEffect,
   useMemo,
   useCallback,
-  useImperativeHandle
+  useImperativeHandle,
+  useDebugValue
 };

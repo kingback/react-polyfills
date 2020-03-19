@@ -6,6 +6,9 @@
     "publish": {
       "allowBranch": "master",
       "verifyAccess": false
+    },
+    "bootstrap": {
+      "npmClientArgs": ["--no-package-lock"]
     }
   },
   "ignoreChanges": [

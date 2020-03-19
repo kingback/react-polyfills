@@ -7,7 +7,7 @@ const hooks = {};
 
 function useHook(hook) {
   // lazy initial
-  return function(...oArgs) {
+  const hookFunc = function(...oArgs) {
     if (!hooks[hook]) {
       hooks[hook] = Engine.get()[hook] ? Engine.get()[hook] : (...args) => {
         if (Dispatcher.current) {
@@ -18,7 +18,9 @@ function useHook(hook) {
       };
     }
     return hooks[hook](...oArgs);
-  }
+  };
+  hookFunc.displayName = hook;
+  return hookFunc;
 }
 
 export const useState = useHook('useState');
@@ -30,11 +32,13 @@ export const useEffect = useHook('useEffect');
 export const useLayoutEffect = useHook('useLayoutEffect');
 export const useRef = useHook('useRef');
 export const useImperativeHandle = useHook('useImperativeHandle');
+export function useDebugValue() {}; // empty function
 
 function createWithHooksComponent(render) {
   const isRax = !!Engine.get().render;
   return class WithHooksComponent extends Engine.get().Component {
     static __with_hooks__ = true;
+    static displayName = render.displayName || render.name || 'WithHooksComponent';
 
     constructor(props) {
       super(props);
