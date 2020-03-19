@@ -82,6 +82,7 @@ For more usage, see <https://reactjs.org/docs/hooks-reference.html>
 * [useRef](https://reactjs.org/docs/hooks-reference.html#useref)
 * [useImperativeHandle](https://reactjs.org/docs/hooks-reference.html#useimperativehandle)
 * [useLayoutEffect](https://reactjs.org/docs/hooks-reference.html#uselayouteffect)
+* [useDebugValue](https://reactjs.org/docs/hooks-reference.html#usedebugvalue)(Just an empty function)
 
 ## Others
 

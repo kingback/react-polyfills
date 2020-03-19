@@ -10,7 +10,8 @@ import {
   useLayoutEffect,
   useMemo,
   useCallback,
-  useImperativeHandle
+  useImperativeHandle,
+  useDebugValue
 } from 'react-polyfill-hooks';
 
 export {
@@ -26,5 +27,6 @@ export {
   useLayoutEffect,
   useMemo,
   useCallback,
-  useImperativeHandle
+  useImperativeHandle,
+  useDebugValue
 };
