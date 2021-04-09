@@ -1,6 +1,6 @@
 {
   "name": "react-polyfill-patch",
-  "version": "1.0.0",
+  "version": "1.0.12",
   "description": "React polyfills patch",
   "keywords": [
     "React",
@@ -32,9 +32,9 @@
     "url": "https://github.com/kingback/react-polyfills/issues"
   },
   "dependencies": {
-    "react-polyfill-context": "^1.0.9",
-    "react-polyfill-hooks": "^1.0.9",
-    "react-polyfill-ref": "^1.0.9"
+    "react-polyfill-context": "^1.0.12",
+    "react-polyfill-hooks": "^1.0.12",
+    "react-polyfill-ref": "^1.0.12"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

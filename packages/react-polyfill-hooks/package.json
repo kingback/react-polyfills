@@ -1,6 +1,6 @@
 {
   "name": "react-polyfill-hooks",
-  "version": "1.0.9",
+  "version": "1.0.12",
   "description": "React hooks polyfill",
   "keywords": [
     "React",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "universal-polyfill-engine": "^1.0.9",
-    "universal-polyfill-hooks": "^1.0.9"
+    "universal-polyfill-hooks": "^1.0.12"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
