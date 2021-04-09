@@ -9,11 +9,11 @@ function useHook(hook) {
   // lazy initial
   const hookFunc = function(...oArgs) {
     if (!hooks[hook]) {
-      hooks[hook] = Engine.get()[hook] ? Engine.get()[hook] : (...args) => {
+      hooks[hook] = Engine.get()[hook] && Engine.get()[hook] !== hookFunc ? Engine.get()[hook] : (...args) => {
         if (Dispatcher.current) {
           return Dispatcher.current[hook].apply(Dispatcher.current, args);
         } else {
-          throw new Error(`You can not use "${hook}" outside of the function.`);
+          throw new Error(`[HOOKS_POLYFILL_ERROR]: You can not use "${hook}" outside of the function.`);
         }
       };
     }
@@ -91,7 +91,7 @@ function createWithHooksComponent(render) {
 export function withHooks(render) {
   // >= 16.3 && <= 16.8
   // has createRef/forwardRef but do not support hooks
-  const _useState = Engine.get().useState;
+  const _useState = Engine.get().useState && Engine.get().useState !== useState;
   !_useState && useFallbackRef();
   return _useState ? render : createWithHooksComponent(render);
 }

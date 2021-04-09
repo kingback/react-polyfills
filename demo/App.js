@@ -1,9 +1,8 @@
-import React from 'react';
-import {
+import 'react-polyfill-patch';
+import React, {
   createRef,
   forwardRef,
   createContext,
-  withHooks,
   useState,
   useContext,
   useEffect,
@@ -12,12 +11,12 @@ import {
   useCallback,
   useImperativeHandle,
   useRef
-} from 'react-polyfill-all';
+} from 'react';
 
 const Context = createContext(0);
 const Forward = forwardRef((props, ref) => <div ref={ref}>Forward: {props.text}</div>);
 
-const Child = forwardRef(withHooks(({ onAdd, onMinus }, ref) => {
+const Child = forwardRef(({ onAdd, onMinus }, ref) => {
   const inputRef = useRef(createRef());
   const value = useContext(Context);
   const [state] = useState(0);
@@ -51,7 +50,7 @@ const Child = forwardRef(withHooks(({ onAdd, onMinus }, ref) => {
       <input ref={inputRef} defaultValue="输入" />
     </div>
   );
-}));
+});
 
 function reducer(state, action) {
   switch (action.type) {
@@ -64,7 +63,7 @@ function reducer(state, action) {
   }
 }
 
-const App = withHooks(() => {
+function App() {
   const ref = useRef();
   const fRef = useRef();
   const [state, dispatch] = useReducer(reducer, { count: 0 });
@@ -92,6 +91,6 @@ const App = withHooks(() => {
       <p onClick={focus}>focus</p>
     </div>
   );
-});
+};
 
 export default App;

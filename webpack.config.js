@@ -4,7 +4,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const alias = {
-  'react': require.resolve('react')
+  'react$': require.resolve('react'),
+  'react-dom': require.resolve('react-dom'),
 };
 
 glob.sync('./packages/*/src/index.js').forEach(file => {

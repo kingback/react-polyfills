@@ -30,7 +30,7 @@ export function createForwardRef(component) {
 }
 
 export function createRef() {
-  if (supportNewRef && Engine.get().createRef) {
+  if (supportNewRef && Engine.get().createRef && Engine.get().createRef !== createRef) {
     return Engine.get().createRef();
   } else {
     const ref = inst => (!ref.forward && (ref.current = inst));  // for useRef
@@ -47,12 +47,18 @@ function createForwardRefComponent(render) {
   };
 }
 
+function addForwardRefTag(render) {
+  render.__need_forward_ref__ = true; // for useRef
+  return render;
+}
+
 export function forwardRef(render) {
   if (render.__with_hooks__) {
-    render.__need_forward_ref__ = true; // for useRef
-    return render;
-  } else if (supportNewRef && Engine.get().forwardRef) {
+    return addForwardRefTag(render);
+  } else if (supportNewRef && Engine.get().forwardRef && Engine.get().forwardRef !== forwardRef) {
     return Engine.get().forwardRef(render);
+  } else if (Engine.get().withHooks) {
+    return addForwardRefTag(Engine.get().withHooks(render));
   } else {
     return createForwardRefComponent(render);
   }

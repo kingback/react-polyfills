@@ -49,7 +49,7 @@ function createContextConsumer(defaultValue, Context) {
 // TODO
 // contextType
 export function createContext(defaultValue) {
-  if (Engine.get().createContext && supportNewContext) return Engine.get().createContext(defaultValue);
+  if (Engine.get().createContext && Engine.get().createContext !== createContext && supportNewContext) return Engine.get().createContext(defaultValue);
   const Context = { _currentValue: defaultValue }; // for useContext
   Context.Provider = createContextProvider(Context);
   Context.Consumer = createContextConsumer(defaultValue, Context);
