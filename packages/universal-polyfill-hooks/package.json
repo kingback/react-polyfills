@@ -1,6 +1,6 @@
 {
   "name": "universal-polyfill-hooks",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Universal polyfill hooks",
   "keywords": [
     "Universal",
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "universal-polyfill-engine": "^1.0.9",
-    "universal-polyfill-ref": "^1.0.12"
+    "universal-polyfill-ref": "^1.0.13"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
