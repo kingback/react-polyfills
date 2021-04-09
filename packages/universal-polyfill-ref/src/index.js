@@ -22,7 +22,7 @@ export function getRef(component) {
 
 export function createForwardRef(component) {
   const ref = getRef(component);
-  if (ref || !component.forwardRef) {  // for useRef
+  if (ref && !component.forwardRef) {  // for useRef
     ref.forward = component.forwardRef = inst => (ref.forward.current = (ref.current = inst));
     ref.forward.current = null;
   }
