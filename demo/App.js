@@ -56,6 +56,12 @@ const Memo = React.memo(({ text }) => {
   return <div>memo: {text}</div>
 });
 
+const Pure = class extends React.PureComponent {
+  render() {
+    return <div>pure: {this.props.text}</div>
+  }
+};
+
 function reducer(state, action) {
   switch (action.type) {
     case 'add':
@@ -94,6 +100,7 @@ function App() {
       </Context.Provider>
       <p onClick={focus}>focus</p>
       <Memo text={0} />
+      <Pure text={state.count} />
     </div>
   );
 };

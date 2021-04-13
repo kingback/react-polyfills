@@ -4,6 +4,7 @@ export const memo: typeof React.memo;
 export const createRef: typeof React.createRef;
 export const forwardRef: typeof React.forwardRef;
 export const createContext: typeof React.createContext;
+export const PureComponent: typeof React.PureComponent;
 
 export const withHooks: (render: React.FC) => React.Component;
 export const useRef: typeof React.useRef;

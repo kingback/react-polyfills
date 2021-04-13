@@ -1,4 +1,5 @@
 import memo from 'react-polyfill-memo';
+import PureComponent from 'react-polyfill-pure-component';
 import { createContext } from 'react-polyfill-context';
 import { createRef, forwardRef } from 'react-polyfill-ref';
 import {
@@ -20,6 +21,7 @@ export {
   createRef,
   forwardRef,
   createContext,
+  PureComponent,
   withHooks,
   useRef,
   useState,
