@@ -1,6 +1,6 @@
 {
   "name": "react-polyfill-portal",
-  "version": "1.0.13",
+  "version": "1.1.0",
   "description": "React createPortal polyfill",
   "keywords": [
     "React",
@@ -29,7 +29,6 @@
   "bugs": {
     "url": "https://github.com/kingback/react-polyfills/issues"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
