@@ -10,6 +10,8 @@
 
 ```js
 import {
+  // memo
+  memo,
   // ref
   createRef,
   forwardRef,
@@ -32,6 +34,7 @@ import {
 Checkout usages below
 
 * [react-polyfill-ref](https://www.npmjs.com/package/react-polyfill-ref)
+* [react-polyfill-memo](https://www.npmjs.com/package/react-polyfill-memo)
 * [react-polyfill-context](https://www.npmjs.com/package/react-polyfill-context)
 * [react-polyfill-hooks](https://www.npmjs.com/package/react-polyfill-hooks)
 

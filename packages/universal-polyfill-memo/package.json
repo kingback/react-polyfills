@@ -1,14 +1,13 @@
 {
-  "name": "react-polyfill-all",
+  "name": "universal-polyfill-memo",
   "version": "1.0.13",
-  "description": "React all polyfills",
+  "description": "Universal polyfill memo",
   "keywords": [
-    "React",
-    "ref",
-    "memo",
-    "context",
-    "hooks",
-    "polyfill"
+    "Universal",
+    "Polyfill",
+    "Memo",
+    "Rax",
+    "React"
   ],
   "author": "huya.nzb <huya.nzb@taobao.com>",
   "homepage": "https://github.com/kingback/react-polyfills",
@@ -26,25 +25,20 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "babel src --out-dir lib && cp src/index.d.ts lib/index.d.ts"
+    "build": "babel src --out-dir lib"
   },
   "bugs": {
     "url": "https://github.com/kingback/react-polyfills/issues"
   },
   "dependencies": {
-    "react-polyfill-context": "^1.0.12",
-    "react-polyfill-hooks": "^1.0.13",
-    "react-polyfill-memo": "^1.0.13",
-    "react-polyfill-ref": "^1.0.13"
+    "react-addons-shallow-compare": "^15.6.3",
+    "universal-polyfill-engine": "^1.0.9"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "react": "^0.14.9",
-    "react-dom": "^0.14.9"
+    "@babel/preset-react": "^7.0.0"
   }
 }

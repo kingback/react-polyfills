@@ -52,6 +52,10 @@ const Child = forwardRef(({ onAdd, onMinus }, ref) => {
   );
 });
 
+const Memo = React.memo(({ text }) => {
+  return <div>memo: {text}</div>
+});
+
 function reducer(state, action) {
   switch (action.type) {
     case 'add':
@@ -89,6 +93,7 @@ function App() {
         {state.count >= -5 ? <Child ref={ref} onAdd={add} onMinus={minus} /> : null}
       </Context.Provider>
       <p onClick={focus}>focus</p>
+      <Memo text={0} />
     </div>
   );
 };

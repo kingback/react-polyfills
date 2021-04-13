@@ -1,3 +1,4 @@
+import memo from 'react-polyfill-memo';
 import { createContext } from 'react-polyfill-context';
 import { createRef, forwardRef } from 'react-polyfill-ref';
 import {
@@ -15,6 +16,7 @@ import {
 } from 'react-polyfill-hooks';
 
 export {
+  memo,
   createRef,
   forwardRef,
   createContext,

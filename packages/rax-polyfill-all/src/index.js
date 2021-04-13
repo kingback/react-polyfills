@@ -1,3 +1,4 @@
+import memo from 'rax-polyfill-memo';
 import { createContext } from 'rax-polyfill-context';
 import { createRef, forwardRef } from 'rax-polyfill-ref';
 import {
@@ -15,6 +16,7 @@ import {
 } from 'rax-polyfill-hooks';
 
 export {
+  memo,
   createRef,
   forwardRef,
   createContext,

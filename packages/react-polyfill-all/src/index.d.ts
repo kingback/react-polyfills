@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+export const memo: typeof React.memo;
 export const createRef: typeof React.createRef;
 export const forwardRef: typeof React.forwardRef;
 export const createContext: typeof React.createContext;
