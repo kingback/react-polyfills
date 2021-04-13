@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import * as polyfills from 'react-polyfill-all';
 
-const { withHooks } = polyfills;
+const { withHooks, createPortal } = polyfills;
 const createElement = React.createElement;
 
 function isFunctionComponent(component) {
@@ -38,5 +39,9 @@ if (!useState) {
 }
 
 Object.keys(polyfills).forEach(p => {
-  if (!React[p]) React[p] = polyfills[p];
+  if (!React[p] && (p !== 'createPortal')) React[p] = polyfills[p];
 });
+
+if (!ReactDOM.createPortal) {
+  ReactDOM.createPortal = createPortal;
+}

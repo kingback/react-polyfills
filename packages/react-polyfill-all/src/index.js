@@ -1,5 +1,6 @@
 import memo from 'react-polyfill-memo';
 import PureComponent from 'react-polyfill-pure-component';
+import { createPortal } from 'react-polyfill-portal';
 import { createContext } from 'react-polyfill-context';
 import { createRef, forwardRef } from 'react-polyfill-ref';
 import {
@@ -20,6 +21,7 @@ export {
   memo,
   createRef,
   forwardRef,
+  createPortal,
   createContext,
   PureComponent,
   withHooks,

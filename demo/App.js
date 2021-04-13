@@ -1,5 +1,7 @@
 import 'react-polyfill-patch';
 import React, {
+  memo,
+  PureComponent,
   createRef,
   forwardRef,
   createContext,
@@ -12,6 +14,7 @@ import React, {
   useImperativeHandle,
   useRef
 } from 'react';
+import { createPortal } from 'react-dom';
 
 const Context = createContext(0);
 const Forward = forwardRef((props, ref) => <div ref={ref}>Forward: {props.text}</div>);
@@ -52,15 +55,19 @@ const Child = forwardRef(({ onAdd, onMinus }, ref) => {
   );
 });
 
-const Memo = React.memo(({ text }) => {
+const Memo = memo(({ text }) => {
   return <div>memo: {text}</div>
 });
 
-const Pure = class extends React.PureComponent {
+const Pure = class extends PureComponent {
   render() {
     return <div>pure: {this.props.text}</div>
   }
 };
+
+const Portal = ({ children }) => {
+  return createPortal(children);
+}
 
 function reducer(state, action) {
   switch (action.type) {
@@ -101,6 +108,9 @@ function App() {
       <p onClick={focus}>focus</p>
       <Memo text={0} />
       <Pure text={state.count} />
+      <Portal>
+        <p>portal</p>
+      </Portal>
     </div>
   );
 };

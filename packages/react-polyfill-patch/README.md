@@ -11,9 +11,13 @@
 ```js
 import 'react-polyfill-patch';
 import {
+  // memo
+  memo,
   // ref
   createRef,
   forwardRef,
+  // PureComponent
+  PureComponent,
   // context
   createContext,
   // hooks
@@ -27,6 +31,7 @@ import {
   useCallback,
   useImperativeHandle
 } from 'react';
+import { createPortal } from 'react-dom';
 ```
 
 Checkout usages below
