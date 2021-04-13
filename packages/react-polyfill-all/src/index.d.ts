@@ -5,6 +5,7 @@ export const memo: typeof React.memo;
 export const createRef: typeof React.createRef;
 export const forwardRef: typeof React.forwardRef;
 export const createContext: typeof React.createContext;
+export const Fragment: typeof React.Fragment;
 export const PureComponent: typeof React.PureComponent;
 
 export const createPortal: typeof ReactDOM.createPortal;

@@ -1,6 +1,7 @@
 import 'react-polyfill-patch';
 import React, {
   memo,
+  Fragment,
   PureComponent,
   createRef,
   forwardRef,
@@ -69,6 +70,14 @@ const Portal = ({ children }) => {
   return createPortal(children);
 }
 
+const List = ({ items }) => {
+  return (
+    <Fragment>
+      {items.map((item, i) => <li key={i}>{item}</li>)}
+    </Fragment>
+  );
+};
+
 function reducer(state, action) {
   switch (action.type) {
     case 'add':
@@ -80,6 +89,14 @@ function reducer(state, action) {
   }
 }
 
+function getItems(length) {
+  const items = [];
+  for (let i = 0; i < length; i++) {
+    items.push(length);
+  }
+  return items;
+}
+
 function App() {
   const ref = useRef();
   const fRef = useRef();
@@ -87,6 +104,7 @@ function App() {
   const add = useCallback(() => dispatch({ type: 'add' }), []);
   const minus = useCallback(() => dispatch({ type: 'minus' }), []);
   const focus = useCallback(() => ref.current.focus(), [ref.current]);
+  const items = getItems(state.count);
 
   useLayoutEffect(() => {
     console.log('app layout');
@@ -106,6 +124,9 @@ function App() {
         {state.count >= -5 ? <Child ref={ref} onAdd={add} onMinus={minus} /> : null}
       </Context.Provider>
       <p onClick={focus}>focus</p>
+      <ul>
+        <List items={items} />
+      </ul>
       <Memo text={0} />
       <Pure text={state.count} />
       <Portal>

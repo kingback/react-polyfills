@@ -15,6 +15,8 @@ import {
   // ref
   createRef,
   forwardRef,
+  // Fragment
+  Fragment,
   // PureComponent
   PureComponent,
   // portal
@@ -40,6 +42,7 @@ Checkout usages below
 * [react-polyfill-ref](https://www.npmjs.com/package/react-polyfill-ref)
 * [react-polyfill-memo](https://www.npmjs.com/package/react-polyfill-memo)
 * [react-polyfill-portal](https://www.npmjs.com/package/react-polyfill-portal)
+* [react-polyfill-fragment](https://www.npmjs.com/package/react-polyfill-fragment)
 * [react-polyfill-context](https://www.npmjs.com/package/react-polyfill-context)
 * [react-polyfill-hooks](https://www.npmjs.com/package/react-polyfill-hooks)
 * [react-polyfill-pure-component](https://www.npmjs.com/package/react-polyfill-pure-component)
