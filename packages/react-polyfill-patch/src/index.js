@@ -6,7 +6,12 @@ const { withHooks, createPortal } = polyfills;
 const createElement = React.createElement;
 
 function isFunctionComponent(component) {
-  return typeof component === 'function' && (!component.prototype || typeof component.prototype.render !== 'function');
+  return typeof component === 'function' && (
+    !component.prototype || (
+      typeof component.prototype.render !== 'function' &&
+      !component.prototype.isReactComponent
+    )
+  );
 }
 
 function cloneFunctionComponent(component) {
