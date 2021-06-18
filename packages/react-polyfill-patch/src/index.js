@@ -18,7 +18,10 @@ function cloneFunctionComponent(component) {
   function CloneFunctionComponent() {
     if (!component.__with_hooks_component__) {
       try {
-        return component.apply(this, arguments);
+        const ret = component.apply(this, arguments);
+        // v0.14 don't support return null/undefined
+        // @see https://github.com/facebook/react/issues/5355
+        return ret == null && /^0\.14\./.test(React.version || '') ? React.createElement('noscript', {}) : ret;
       } catch (e) {
         if (/^\[HOOKS_POLYFILL_ERROR\]/.test(e.message)) {
           component.__with_hooks_component__ = withHooks(component);
