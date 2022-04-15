@@ -101,11 +101,9 @@ export default class Dispatcher {
 
   useRef(current) {
     return this.useState(() => {
-      if (isFunction(current) && ('current' in current)) {
-        return current;
-      } else {
-        return createRef(current);
-      }
+      const ref = createRef();
+      ref.current = current;
+      return ref;
     })[0];
   }
 

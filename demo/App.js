@@ -17,13 +17,13 @@ import React, {
 } from 'react';
 import { createPortal } from 'react-dom';
 
-console.log([createRef(true)]);
+console.log([createRef()]);
 
 const Context = createContext(0);
 const Forward = forwardRef((props, ref) => <div ref={ref}>Forward: {props.text}</div>);
 
 const Child = forwardRef(({ onAdd, onMinus }, ref) => {
-  const inputRef = useRef(createRef());
+  const inputRef = useRef();
   const value = useContext(Context);
   const [state] = useState(0);
 
