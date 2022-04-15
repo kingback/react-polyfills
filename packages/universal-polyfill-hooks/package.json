@@ -41,5 +41,5 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0"
   },
-  "gitHead": "f4a4cbcece9c6f5f2597260314c9909ed3edbf63"
+  "gitHead": "dddc76f42c4d577843061ff85d4cf7e4938a526c"
 }
