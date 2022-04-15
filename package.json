@@ -4,7 +4,9 @@
   "scripts": {
     "link": "lerna link",
     "bootstrap": "lerna bootstrap",
-    "start": "NODE_ENV=deveploment webpack-dev-server"
+    "start": "NODE_ENV=deveploment webpack-dev-server",
+    "build": "lerna run build",
+    "release": "npm run build && lerna publish"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
