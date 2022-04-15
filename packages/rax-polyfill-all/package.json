@@ -1,6 +1,6 @@
 {
   "name": "rax-polyfill-all",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Rax all polyfills",
   "keywords": [
     "Rax",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "rax-polyfill-context": "^1.0.12",
-    "rax-polyfill-hooks": "^1.1.7",
+    "rax-polyfill-hooks": "^1.1.8",
     "rax-polyfill-memo": "^1.1.0",
     "rax-polyfill-ref": "^1.0.13"
   },
