@@ -13,7 +13,6 @@
       ]
     }
   },
-  "npmClient": "yarn",
   "ignoreChanges": [
     "**/*.md"
   ],
