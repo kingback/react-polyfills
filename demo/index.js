@@ -2,4 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+const container = document.createElement('div');
+document.body.appendChild(container);
+ReactDOM.render(<App />, container);

@@ -19,7 +19,6 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: '/demo/',
     filename: 'index.js'
   },
   watch: true,
@@ -27,6 +26,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     inline: true,
     hot: true,
+    open: true,
     headers: {
       "Cache-Control": "no-cache"
     }
@@ -51,9 +51,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: 'template/index.html'
-    })
+    new HtmlWebpackPlugin({})
   ],
   resolve: {
     alias
