@@ -17,6 +17,8 @@ import React, {
 } from 'react';
 import { createPortal } from 'react-dom';
 
+console.log([createRef(true)]);
+
 const Context = createContext(0);
 const Forward = forwardRef((props, ref) => <div ref={ref}>Forward: {props.text}</div>);
 
@@ -67,7 +69,7 @@ const Pure = class extends PureComponent {
 };
 
 const Portal = ({ children }) => {
-  return createPortal(children);
+  return createPortal(children, document.body);
 }
 
 const List = ({ items }) => {

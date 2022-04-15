@@ -99,8 +99,14 @@ export default class Dispatcher {
     return this.useMemo(() => callback, deps);
   }
 
-  useRef(ref) {
-    return this.useState(() => (ref || createRef()))[0];
+  useRef(current) {
+    return this.useState(() => {
+      if (isFunction(current) && ('current' in current)) {
+        return current;
+      } else {
+        return createRef(current);
+      }
+    })[0];
   }
 
   useImperativeHandle(ref, createHandle, deps) {
