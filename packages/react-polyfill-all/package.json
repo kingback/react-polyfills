@@ -1,6 +1,6 @@
 {
   "name": "react-polyfill-all",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "React all polyfills",
   "keywords": [
     "React",
@@ -35,7 +35,7 @@
   "dependencies": {
     "react-polyfill-context": "^1.0.12",
     "react-polyfill-fragment": "^1.1.0",
-    "react-polyfill-hooks": "^1.1.5",
+    "react-polyfill-hooks": "^1.1.6",
     "react-polyfill-memo": "^1.1.0",
     "react-polyfill-portal": "^1.1.0",
     "react-polyfill-pure-component": "^1.1.0",
